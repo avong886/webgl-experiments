@@ -26,7 +26,7 @@
         "visible":true,
         "DbgName":"01 - Default",
         "shading":"lambert",
-        "wireframe":true,
+        "wireframe":false,
         "DbgColor":15658734,
         "opacity":1,
         "depthTest":true
