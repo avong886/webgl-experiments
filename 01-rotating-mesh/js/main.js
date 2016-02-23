@@ -67,7 +67,7 @@ function rotateMesh() {
     //mesh.rotation.z -= SPEED * 3;
     if (38 in keysDown)
     {
-        xLocation += 1;
+        xLocation += 0.01;
         mesh.position.set( xLocation, 0, 0 );
         //mesh.__dirtyPosition = true;
         
