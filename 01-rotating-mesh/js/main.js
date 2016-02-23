@@ -68,16 +68,16 @@ function rotateMesh() {
     if (38 in keysDown)
     {
         xLocation += 0.05;
-       
+       mesh.position.set( xLocation, 0,0 );
         //mesh.__dirtyPosition = true;
         
     }
     if (40 in keysDown)
     {
     	xLocation -= 0.05;
-    	
+    	mesh.position.set( xLocation, 0,0 );
     }
-     mesh.position.set( xLocation, 0,0 );
+     
 }
 
 function render() {
