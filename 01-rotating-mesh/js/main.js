@@ -38,7 +38,7 @@ function initMesh() {
     var loader = new THREE.JSONLoader();
     loader.load('./halo_spartan.json', function(geometry, materials) {
         mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
-        mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.75;
+        mesh.scale.x = mesh.scale.y = mesh.scale.z = 10;
         mesh.translation = THREE.GeometryUtils.center(geometry);
         scene.add(mesh);
     });
