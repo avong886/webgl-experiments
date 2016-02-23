@@ -39,7 +39,7 @@ function initMesh() {
     var loader = new THREE.JSONLoader();
     loader.load('./spartan3.json', function(geometry, materials) {
         mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
-        mesh.scale.x = mesh.scale.y = mesh.scale.z = 5;
+        mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
         mesh.translation = THREE.GeometryUtils.center(geometry);
         scene.add(mesh);
     });
