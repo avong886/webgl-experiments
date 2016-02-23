@@ -17,7 +17,7 @@
     "materials":[{
         "DbgIndex":0,
         "blending":"NormalBlending",
-        "colorEmissive":[0,0,0],
+        "colorEmissive":[0.5,0.5,0.5],
         "colorDiffuse":[0.280444,0.280444,0.280444],
         "transparent":false,
         "depthWrite":true,
