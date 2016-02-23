@@ -33,7 +33,7 @@
     },{
         "DbgIndex":1,
         "blending":"NormalBlending",
-        "colorEmissive":[0,0,0],
+        "colorEmissive":[1,1,1],
         "colorDiffuse":[0.003378,0.340808,0.64],
         "transparent":false,
         "depthWrite":true,
