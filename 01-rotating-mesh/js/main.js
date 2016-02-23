@@ -51,7 +51,7 @@ function initMesh() {
     var loader = new THREE.JSONLoader();
     loader.load('./spartan6.json', function(geometry, materials) {
         mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
-        mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
+        mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.75;
         mesh.translation = THREE.GeometryUtils.center(geometry);
         scene.add(mesh);
     });
@@ -68,10 +68,16 @@ function rotateMesh() {
     if (38 in keysDown)
     {
         xLocation += 0.01;
-        mesh.position.set( 0,xLocation, 0 );
+       
         //mesh.__dirtyPosition = true;
         
     }
+    if (40 in keysDown)
+    {
+    	xLocation -= 0.01;
+    	
+    }
+     mesh.position.set( xLocation, 0,0 );
 }
 
 function render() {
