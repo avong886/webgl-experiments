@@ -138,8 +138,12 @@ mouseY = event.offsetY;
 
 function setupCanvas() {
 
-canvas = document.createElement( 'canvas' );
-c = canvas.getContext( '2d' );
+canvas1 = document.createElement( 'canvas' );
+c = canvas1.getContext( '2d' );
+var att = document.createAttribute("id");  
+att.value ="canvas3";
+canvas1.setAttributeNode(att);
+
 container = document.createElement( 'div' );
 container.className = "container";
 
@@ -147,7 +151,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight; 
 
 document.body.appendChild( container );
-container.appendChild(canvas);	
+container.appendChild(canvas1);	
 
 c.strokeStyle = "#ffffff";
 c.lineWidth =2;	
