@@ -29,7 +29,7 @@ function initRenderer() {
 }
 
 function initLights() {
-    var light = new THREE.PointLight( 0xff0000, 1, 100 ); 
+    var light = new THREE.PointLight( 0xffffff, 5, 100 ); 
     light.position.set( 50, 50, 50 ); 
     scene.add( light );
 }
