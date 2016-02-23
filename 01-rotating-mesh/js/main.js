@@ -37,7 +37,7 @@ function initLights() {
 var mesh = null;
 function initMesh() {
     var loader = new THREE.JSONLoader();
-    loader.load('./spartan4.json', function(geometry, materials) {
+    loader.load('./spartan5.json', function(geometry, materials) {
         mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
         mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
         mesh.translation = THREE.GeometryUtils.center(geometry);
