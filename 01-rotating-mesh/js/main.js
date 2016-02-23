@@ -50,8 +50,8 @@ function rotateMesh() {
         return;
     }
 
-    mesh.rotation.x -= SPEED * 2;
-    mesh.rotation.y -= SPEED;
+    //mesh.rotation.x -= SPEED * 2;
+    //mesh.rotation.y -= SPEED;
     mesh.rotation.z -= SPEED * 3;
 }
 
