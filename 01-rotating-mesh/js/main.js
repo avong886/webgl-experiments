@@ -1,5 +1,17 @@
 var scene, camera, renderer;
 
+// Handle keyboard controls
+var keysDown = {};
+var xLocation = 0;
+
+addEventListener("keydown", function (e) {
+	keysDown[e.keyCode] = true;
+}, false);
+
+addEventListener("keyup", function (e) {
+	delete keysDown[e.keyCode];
+}, false);
+
 var WIDTH  = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
@@ -53,10 +65,18 @@ function rotateMesh() {
     //mesh.rotation.x -= SPEED * 2;
     mesh.rotation.y -= SPEED;
     //mesh.rotation.z -= SPEED * 3;
+    if (38 in keysDown)
+    {
+        xLocation += 1;
+        mesh.position.set( xLocation, 0, 0 );
+        //mesh.__dirtyPosition = true;
+        
+    }
 }
 
 function render() {
     requestAnimationFrame(render);
+    
     rotateMesh();
     renderer.render(scene, camera);
 }
