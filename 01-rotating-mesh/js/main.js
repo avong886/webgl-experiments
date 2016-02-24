@@ -17,11 +17,31 @@ var WIDTH  = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
 var SPEED = 0.01;
+var radius = 5,
+segments = 6,
+rings = 6;
+
+
+var sphereMaterial =
+new THREE.MeshLambertMaterial(
+{
+color: 0xD43001
+});
+
+
 
 function init() {
     scene = new THREE.Scene();
 
     initMesh();
+var ball = new THREE.Mesh(
+    new THREE.SphereGeometry(radius,
+    segments,
+    rings),
+    sphereMaterial);
+scene.add(ball);
+
+
     initCamera();
     initLights();
     initRenderer();
