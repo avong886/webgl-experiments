@@ -44,18 +44,18 @@ scene.add(ball);
 var planeMaterial =
 new THREE.MeshLambertMaterial(
 {
-    color: 0x4BD121
+    color: 0x996600
 });
 
 //playing surface plane
 var plane = new THREE.Mesh(
     new THREE.PlaneGeometry(
     100 * 0.95,	// 95% of table width, since we want to show where the ball goes out-of-bounds
-    1,1,1),
+    95,1,1),
     planeMaterial);
 
 scene.add(plane);
-
+plane.position.set(0,0,-2);
     initCamera();
     initLights();
     initRenderer();
