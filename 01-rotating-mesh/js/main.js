@@ -120,7 +120,7 @@ function rotateMesh() {
     }
     xLocation += spartanspeed;
 yLocation += spartanspeed2;
-     mesh.position.set( xLocation, 0,0 );
+     mesh.position.set( xLocation, yLocation,0 );
 }
 
 function render() {
