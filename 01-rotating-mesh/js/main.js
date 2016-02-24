@@ -3,6 +3,7 @@ var scene, camera, renderer;
 // Handle keyboard controls
 var keysDown = {};
 //var xLocation = 0;
+var spartanspeed = 0;
 
 addEventListener("keydown", function (e) {
 	keysDown[e.keyCode] = true;
@@ -65,19 +66,21 @@ function rotateMesh() {
     //mesh.rotation.x -= SPEED * 2;
     mesh.rotation.y -= SPEED;
     //mesh.rotation.z -= SPEED * 3;
+    spartanspeed = 0;
     if (38 in keysDown)
     {
-        xLocation += 0.05;
-       mesh.position.set( xLocation, 0,0 );
+        spartanspeed = 0.05;
+       
         //mesh.__dirtyPosition = true;
         
     }
     if (40 in keysDown)
     {
-    	xLocation -= 0.05;
-    	mesh.position.set( xLocation, 0,0 );
+    	spartanspeed = -0.05;
+    	
     }
-     
+    xLocation += spartanspeed;
+     mesh.position.set( xLocation, 0,0 );
 }
 
 function render() {
