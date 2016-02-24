@@ -25,7 +25,7 @@ rings = 6;
 var sphereMaterial =
 new THREE.MeshLambertMaterial(
 {
-color: 0xD43001
+color: 0x33FFCC
 });
 
 
