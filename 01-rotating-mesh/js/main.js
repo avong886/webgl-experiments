@@ -44,7 +44,7 @@ scene.add(ball);
 var planeMaterial =
 new THREE.MeshLambertMaterial(
 {
-    color: 0x009933
+    color: 0x33FFCC
 });
 
 //playing surface plane
@@ -119,8 +119,8 @@ function rotateMesh() {
     	
     }
     xLocation += spartanspeed;
-yLocation += spartanspeed2;
-     mesh.position.set( xLocation, yLocation,0 );
+//yLocation += spartanspeed2;
+     mesh.position.set( xLocation, 0,0 );
 }
 
 function render() {
