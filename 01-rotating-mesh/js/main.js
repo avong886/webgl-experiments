@@ -44,7 +44,7 @@ scene.add(ball);
 var planeMaterial =
 new THREE.MeshLambertMaterial(
 {
-    color: 0x996600
+    color: 0x009933
 });
 
 //playing surface plane
