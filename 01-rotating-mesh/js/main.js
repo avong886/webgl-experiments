@@ -54,8 +54,12 @@ var plane = new THREE.Mesh(
     1,1,1),
     planeMaterial);
 
+
 scene.add(plane);
-plane.position.set(1,1,-2);
+
+plane.position.set(1,-2,1);
+plane.rotation.z=Math.PI/2;
+
     initCamera();
     initLights();
     initRenderer();
