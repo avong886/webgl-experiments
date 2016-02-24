@@ -66,7 +66,7 @@ function rotateMesh() {
     //mesh.rotation.x -= SPEED * 2;
     mesh.rotation.y -= SPEED;
     //mesh.rotation.z -= SPEED * 3;
-    spartanspeed = 0;
+    //spartanspeed = 0;
     if (38 in keysDown)
     {
         spartanspeed = 0.05;
