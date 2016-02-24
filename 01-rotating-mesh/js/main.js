@@ -2,7 +2,7 @@ var scene, camera, renderer;
 
 // Handle keyboard controls
 var keysDown = {};
-var xLocation = 0;
+//var xLocation = 0;
 
 addEventListener("keydown", function (e) {
 	keysDown[e.keyCode] = true;
