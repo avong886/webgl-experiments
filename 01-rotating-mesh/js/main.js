@@ -50,15 +50,16 @@ new THREE.MeshLambertMaterial(
 //playing surface plane
 var plane = new THREE.Mesh(
     new THREE.PlaneGeometry(
-    1,	// 95% of table width, since we want to show where the ball goes out-of-bounds
+    3,	// 95% of table width, since we want to show where the ball goes out-of-bounds
     1,1,1),
     planeMaterial);
-
+plane.rotation.z=Math.PI/2;
+plane.doubleSided=true;
 
 scene.add(plane);
 
 plane.position.set(1,-2,1);
-plane.rotation.z=Math.PI/2;
+
 
     initCamera();
     initLights();
