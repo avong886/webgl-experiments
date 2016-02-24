@@ -42,7 +42,7 @@ if(touches[0])
 {
 if (touches[0].clientX<380)
 {
-xLocation+=(touches[0].clientX-initialX)*0.01;
+xLocation+=(touches[0].clientX-initialX);
 }
 
 }
