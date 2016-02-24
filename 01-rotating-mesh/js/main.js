@@ -17,7 +17,7 @@ var WIDTH  = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
 var SPEED = 0.01;
-var radius = 5,
+var radius = .1,
 segments = 6,
 rings = 6;
 
