@@ -39,12 +39,12 @@ function draw() {
 
 
 c.clearRect(0,0,canvas1.width, canvas1.height); 
-xLocation += 0.01;
+//xLocation += 0.01;
 if(touches[0])
 {
 if (touches[0].clientX<380)
 {
-spartanspeed =(touches[0].clientX-initialX);
+spartanspeed =(touches[0].clientX-initialX)*0.01;
 }
 
 }
