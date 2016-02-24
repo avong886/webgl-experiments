@@ -51,7 +51,7 @@ new THREE.MeshLambertMaterial(
 var plane = new THREE.Mesh(
     new THREE.PlaneGeometry(
     100 * 0.95,	// 95% of table width, since we want to show where the ball goes out-of-bounds
-    95,1,1),
+    2,1,1),
     planeMaterial);
 
 scene.add(plane);
@@ -64,9 +64,9 @@ plane.position.set(0,0,-2);
 }
 
 function initCamera() {
-    camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 10);
+    camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 100);
     camera.position.set(0, 3.5, 5);
-    camera.lookAt(scene.position);
+    camera.lookAt(mesh.position);
 }
 
 
@@ -79,9 +79,9 @@ function initLights() {
     var light = new THREE.PointLight( 0xffffff, 5, 100 ); 
     light.position.set( 50, 50, 50 ); 
     scene.add( light );
-spotLight = new THREE.SpotLight(0xF8D898);
+spotLight = new THREE.SpotLight(0xffffff);
 spotLight.position.set(0, 0, 460);
-spotLight.intensity = 1.5;
+spotLight.intensity = 0.5;
 spotLight.castShadow = true;
 scene.add(spotLight);
 }
