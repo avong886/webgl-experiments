@@ -51,7 +51,7 @@ new THREE.MeshLambertMaterial(
 var plane = new THREE.Mesh(
     new THREE.PlaneGeometry(
     1,	// 95% of table width, since we want to show where the ball goes out-of-bounds
-    1,0.5,1),
+    1,1,1),
     planeMaterial);
 
 scene.add(plane);
