@@ -64,7 +64,7 @@ plane.position.set(1,1,-2);
 }
 
 function initCamera() {
-    camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 0.01, 100);
+    camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 100);
     camera.position.set(0, 3.5, 5);
     camera.lookAt(scene.position);
 }
