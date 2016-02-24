@@ -1,6 +1,8 @@
- var initialX=0;
+
+    //var xLocation=0;
+     var initialX=0;
 var initialY=0;
-var canvas,
+var canvas1,
 c, // c is the canvas' context 2D
 container;
 setupCanvas();
@@ -12,20 +14,20 @@ touches = []; // array of touch vectors
 
 setInterval(draw, 1000/35); 
 if(touchable) {
-canvas.addEventListener( 'touchstart', onTouchStart, false );
-canvas.addEventListener( 'touchmove', onTouchMove, false );
-canvas.addEventListener( 'touchend', onTouchEnd, false );
+canvas1.addEventListener( 'touchstart', onTouchStart, false );
+canvas1.addEventListener( 'touchmove', onTouchMove, false );
+canvas1.addEventListener( 'touchend', onTouchEnd, false );
 window.onorientationchange = resetCanvas; 
 window.onresize = resetCanvas; 
 } else {
 
-canvas.addEventListener( 'mousemove', onMouseMove, false );
+canvas1.addEventListener( 'mousemove', onMouseMove, false );
 }
 
 function resetCanvas (e) { 
 // resize the canvas - but remember - this clears the canvas too. 
-canvas.width = window.innerWidth; 
-canvas.height = window.innerHeight;
+canvas1.width = window.innerWidth; 
+canvas1.height = window.innerHeight;
 
 //make sure we scroll to the top left. 
 window.scrollTo(0,0); 
@@ -35,7 +37,7 @@ function draw() {
 
 
 
-c.clearRect(0,0,canvas.width, canvas.height); 
+c.clearRect(0,0,canvas1.width, canvas1.height); 
 if(touches[0])
 {
 if (touches[0].clientX<380)
@@ -147,8 +149,8 @@ canvas1.setAttributeNode(att);
 container = document.createElement( 'div' );
 container.className = "container";
 
-canvas.width = window.innerWidth; 
-canvas.height = window.innerHeight; 
+canvas1.width = window.innerWidth; 
+canvas1.height = window.innerHeight; 
 
 document.body.appendChild( container );
 container.appendChild(canvas1);	
@@ -156,3 +158,5 @@ container.appendChild(canvas1);
 c.strokeStyle = "#ffffff";
 c.lineWidth =2;	
 }
+
+    
