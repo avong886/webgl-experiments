@@ -45,7 +45,7 @@ if(touches[0])
 {
 if (touches[0].clientX<380)
 {
-spartanspeed =(touches[0].clientX-initialX)*0.01;
+spartanspeed =(touches[0].clientX-initialX)*0.001;
 }
 
 }
