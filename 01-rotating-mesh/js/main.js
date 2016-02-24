@@ -41,6 +41,20 @@ var ball = new THREE.Mesh(
     sphereMaterial);
 scene.add(ball);
 
+var planeMaterial =
+new THREE.MeshLambertMaterial(
+{
+    color: 0x4BD121
+});
+
+//playing surface plane
+var plane = new THREE.Mesh(
+    new THREE.PlaneGeometry(
+    100 * 0.95,	// 95% of table width, since we want to show where the ball goes out-of-bounds
+    1),
+    planeMaterial);
+
+scene.add(plane);
 
     initCamera();
     initLights();
@@ -65,6 +79,11 @@ function initLights() {
     var light = new THREE.PointLight( 0xffffff, 5, 100 ); 
     light.position.set( 50, 50, 50 ); 
     scene.add( light );
+spotLight = new THREE.SpotLight(0xF8D898);
+spotLight.position.set(0, 0, 460);
+spotLight.intensity = 1.5;
+spotLight.castShadow = true;
+scene.add(spotLight);
 }
 
 var mesh = null;
