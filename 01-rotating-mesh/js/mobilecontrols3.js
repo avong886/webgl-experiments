@@ -38,6 +38,7 @@ function draw() {
 
 
 c.clearRect(0,0,canvas1.width, canvas1.height); 
+xLocation += 0.01;
 if(touches[0])
 {
 if (touches[0].clientX<380)
