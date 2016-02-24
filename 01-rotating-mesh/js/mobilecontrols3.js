@@ -43,6 +43,8 @@ function draw() {
 
 c.clearRect(0,0,canvas1.width, canvas1.height); 
 spartanspeed=0;
+spartanspeed2=0;
+
 //xLocation += 0.01;
 if(touches[0])
 {
