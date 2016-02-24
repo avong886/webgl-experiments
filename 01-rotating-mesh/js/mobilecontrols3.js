@@ -1,5 +1,6 @@
 
     var xLocation=0;
+    var spartanspeed = 0;
      var initialX=0;
 var initialY=0;
 var canvas1,
@@ -43,7 +44,7 @@ if(touches[0])
 {
 if (touches[0].clientX<380)
 {
-xLocation+=(touches[0].clientX-initialX);
+spartanspeed =(touches[0].clientX-initialX);
 }
 
 }
