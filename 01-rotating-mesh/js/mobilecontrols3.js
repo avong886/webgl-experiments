@@ -91,7 +91,7 @@ c.stroke();
 } else {
 
 c.fillStyle	= "white"; 
-c.fillText("mouse : "+mouseX+", "+mouseY, mouseX, mouseY); 
+c.fillText("mouse : "+xLocation+", "+mouseY, mouseX, mouseY); 
 
 }
 
