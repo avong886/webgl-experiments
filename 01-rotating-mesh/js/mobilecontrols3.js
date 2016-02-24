@@ -1,5 +1,5 @@
 
-    //var xLocation=0;
+    var xLocation=0;
      var initialX=0;
 var initialY=0;
 var canvas1,
