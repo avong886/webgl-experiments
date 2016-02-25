@@ -54,7 +54,7 @@ var plane = new THREE.Mesh(
     1,1,1),
     planeMaterial);
 //plane.rotation.x= Math.PI/2;
-plane.doubleSided=true;
+//plane.doubleSided=true;
 
 scene.add(plane);
 
