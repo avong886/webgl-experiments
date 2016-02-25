@@ -54,14 +54,14 @@ var plane = new THREE.Mesh(
     1,1,1),
     planeMaterial);
 //plane.rotation.x= Math.PI/2;
-//plane.doubleSided=true;
+plane.doubleSided=true;
 
 scene.add(plane);
 
 plane.position.set(1,-2,1);
 plane.rotation.set(Math.PI/2,0,0);
 
-
+plane.material.side = THREE.DoubleSide;
 
     initCamera();
     initLights();
