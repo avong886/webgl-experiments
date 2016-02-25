@@ -86,6 +86,7 @@ plane2.rotation.set( Math.PI/2,0,0);
 plane2.material.side = THREE.DoubleSide;
 
     initCamera();
+camera.lookAt(mesh.position);
     initLights();
     initRenderer();
 
