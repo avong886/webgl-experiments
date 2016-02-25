@@ -59,7 +59,7 @@ var plane = new THREE.Mesh(
 scene.add(plane);
 
 plane.position.set(1,-2,1);
-
+plane.rotation.set(0,0,Math.PI/2);
 
 
 
