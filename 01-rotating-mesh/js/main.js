@@ -86,7 +86,8 @@ plane2.rotation.set( Math.PI/2,0,0);
 plane2.material.side = THREE.DoubleSide;
 
     initCamera();
-camera.lookAt(mesh.position);
+
+
     initLights();
     initRenderer();
 
@@ -151,6 +152,7 @@ function rotateMesh() {
     xLocation += spartanspeed;
 yLocation += spartanspeed2;
      mesh.position.set( xLocation, 0,yLocation );
+camera.lookAt(mesh.position);
 }
 
 function render() {
