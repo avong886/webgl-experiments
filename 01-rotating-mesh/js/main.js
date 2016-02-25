@@ -137,23 +137,23 @@ function rotateMesh() {
     mesh.rotation.y -= SPEED;
     //mesh.rotation.z -= SPEED * 3;
     //spartanspeed = 0;
-    if (37 in keysDown)
+    if (39 in keysDown)
     {
         spartanspeed = 0.05;
        
         //mesh.__dirtyPosition = true;
         
     }
-    if (39 in keysDown)
+    if (37 in keysDown)
     {
     	spartanspeed = -0.05;
     	
     }
-    if (38 in keysDown)
+    if (40 in keysDown)
     {
     	spartanspeed2 = 0.05;
     }
-    if (40 in keysDown)
+    if (38 in keysDown)
     {
     	spartanspeed2 = -0.05;
     }
