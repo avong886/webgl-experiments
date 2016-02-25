@@ -80,7 +80,7 @@ var plane2 = new THREE.Mesh(
 
 scene.add(plane2);
 
-plane2.position.set(-1,-0.5,1);
+plane2.position.set(-1,-1.5,-1);
 plane2.rotation.set( Math.PI/2,0,0);
 
 plane2.material.side = THREE.DoubleSide;
