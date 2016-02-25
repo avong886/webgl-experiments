@@ -73,14 +73,14 @@ plane.material.side = THREE.DoubleSide;
 var plane2 = new THREE.Mesh(
     new THREE.PlaneGeometry(
     10,	// 95% of table width, since we want to show where the ball goes out-of-bounds
-    20,1,1),
+    5,1,1),
     planeMaterial2);
 //plane.rotation.x= Math.PI/2;
 //plane.doubleSided=true;
 
 scene.add(plane2);
 
-plane2.position.set(-1,-1.5,1);
+plane2.position.set(-1,-0.5,1);
 plane2.rotation.set( Math.PI/2,0,0);
 
 plane2.material.side = THREE.DoubleSide;
