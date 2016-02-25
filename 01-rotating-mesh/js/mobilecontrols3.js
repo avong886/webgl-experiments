@@ -1,6 +1,8 @@
 
     var xLocation=0;
 var yLocation=0;
+var zLocation=0;
+var jumpSpeed = 0;
     var spartanspeed = 0;
 var spartanspeed2 = 0;
 
@@ -45,6 +47,7 @@ c.clearRect(0,0,canvas1.width, canvas1.height);
 spartanspeed=0;
 spartanspeed2=0;
 
+
 //xLocation += 0.01;
 if(touches[0])
 {
@@ -53,6 +56,10 @@ if (touches[0].clientX<380)
 spartanspeed =(touches[0].clientX-initialX)*0.001;
 
 spartanspeed2 =(touches[0].clientY-initialY)*0.001;
+}
+if (touches[0].clientX >= 380)
+{
+    jumpSpeed = 1;
 }
 
 
