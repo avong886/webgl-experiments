@@ -137,21 +137,46 @@ function rotateMesh() {
     mesh.rotation.y -= SPEED;
     //mesh.rotation.z -= SPEED * 3;
     //spartanspeed = 0;
-    if (38 in keysDown)
+    if (37 in keysDown)
     {
         spartanspeed = 0.05;
        
         //mesh.__dirtyPosition = true;
         
     }
-    if (40 in keysDown)
+    if (39 in keysDown)
     {
     	spartanspeed = -0.05;
     	
     }
+    if (38 in keysDown)
+    {
+    	spartanspeed2 = 0.05;
+    }
+    if (40 in keysDown)
+    {
+    	spartanspeed2 = -0.05;
+    }
+    if (32 in keysDown && zLocation < 1)
+    {
+    	jumpSpeed = 1;
+    
+    }
+    
+    if (jumpSpeed > 0)
+    {
+    	jumpSpeed -= 0.1;
+    }
+    zLocation += jumpSpeed;
+    
     xLocation += spartanspeed;
 yLocation += spartanspeed2;
-     mesh.position.set( xLocation, 0,yLocation );
+if (zLocation < 0)
+{
+	zLocation = 0;
+	jumpSpeed = 0;
+}
+     mesh.position.set( xLocation, zLocation ,yLocation );
 camera.lookAt(mesh.position);
 }
 
