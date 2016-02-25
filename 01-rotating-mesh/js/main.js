@@ -53,7 +53,7 @@ var plane = new THREE.Mesh(
     3,	// 95% of table width, since we want to show where the ball goes out-of-bounds
     1,1,1),
     planeMaterial);
-plane.rotation.x=Math.PI/2;
+plane.rotation.x= Math.PI/2;
 plane.doubleSided=true;
 
 scene.add(plane);
@@ -61,17 +61,6 @@ scene.add(plane);
 plane.position.set(1,-2,1);
 
 
-var plane2 = new THREE.Mesh(
-    new THREE.PlaneGeometry(
-    3,	// 95% of table width, since we want to show where the ball goes out-of-bounds
-    1,1,1),
-    planeMaterial);
-plane2.rotation.y=Math.PI/2;
-//plane2.doubleSided=true;
-
-scene.add(plane2);
-
-plane2.position.set(1,-3,1);
 
 
     initCamera();
