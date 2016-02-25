@@ -47,6 +47,12 @@ new THREE.MeshLambertMaterial(
     color: 0x33FFCC
 });
 
+var planeMaterial2 =
+new THREE.MeshLambertMaterial(
+{
+    color: 0x996600
+});
+
 //playing surface plane
 var plane = new THREE.Mesh(
     new THREE.PlaneGeometry(
@@ -62,6 +68,22 @@ plane.position.set(1,-2,1);
 plane.rotation.set( Math.PI/2,0,0);
 
 plane.material.side = THREE.DoubleSide;
+
+
+var plane2 = new THREE.Mesh(
+    new THREE.PlaneGeometry(
+    30,	// 95% of table width, since we want to show where the ball goes out-of-bounds
+    20,1,1),
+    planeMaterial2);
+//plane.rotation.x= Math.PI/2;
+//plane.doubleSided=true;
+
+scene.add(plane2);
+
+plane2.position.set(-1,-2.5,1);
+plane2.rotation.set( Math.PI/2,0,0);
+
+plane2.material.side = THREE.DoubleSide;
 
     initCamera();
     initLights();
