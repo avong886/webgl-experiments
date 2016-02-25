@@ -67,11 +67,11 @@ var plane2 = new THREE.Mesh(
     1,1,1),
     planeMaterial);
 plane2.rotation.y=Math.PI/2;
-plane2.doubleSided=true;
+//plane2.doubleSided=true;
 
 scene.add(plane2);
 
-plane2.position.set(5,-2,1);
+plane2.position.set(1,-3,1);
 
 
     initCamera();
