@@ -153,13 +153,13 @@ renderer.shadowMapEnabled = true;
 }
 
 function initLights() {
-    var light = new THREE.PointLight( 0xffffff, 1, 100 ); 
-    light.position.set( 0, 10, 0 ); 
-    scene.add( light );
+   // var light = new THREE.PointLight( 0xffffff, 1, 100 ); 
+    //light.position.set( 0, 10, 0 ); 
+   // scene.add( light );
 
-var light2 = new THREE.PointLight( 0xffff66, 1, 100 ); 
-    light2.position.set( 0, 10, 0); 
-    scene.add( light2 );
+//var light2 = new THREE.PointLight( 0xffff66, 1, 100 ); 
+   // light2.position.set( 0, 10, 0); 
+   // scene.add( light2 );
 
 spotLight = new THREE.SpotLight(0xffffff);
 spotLight.position.set(0, 10, 0);
