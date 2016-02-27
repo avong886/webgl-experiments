@@ -160,7 +160,7 @@ renderer.shadowMapEnabled = true;
 renderer.shadowMapSize = 100;
 renderer.shadowMapSoft = true;
 
-renderer.shadowCameraNear = 0.1;
+renderer.shadowCameraNear = 1;
 renderer.shadowCameraFar = camera.far;
 renderer.shadowCameraFov = 50;
 
