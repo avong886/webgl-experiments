@@ -21,6 +21,11 @@ var radius = .1,
 segments = 6,
 rings = 6;
 
+map=[
+[0,1,0,0,1,0,0,0],
+[0,1,0,0,1,0,0,0],
+[0,0,1,0,0,0,0,0]];
+
 
 
 
@@ -87,6 +92,30 @@ plane2.rotation.set( Math.PI/2,0,0);
 
 plane2.material.side = THREE.DoubleSide;
 
+var cube= new THREE.CubeGeometry(0.1, 0.2, 0.1);
+
+for(var i = 0; i < 3; i++)
+{
+for(var j = 0; j < 8; j++)
+{
+
+if(map[i][j]==1)
+{
+
+var buildingblock= new THREE.Mesh( cube, planeMaterial2);
+buildingblock.position.x=j*0.1;
+buildingblock.position.y=i*0.1;
+buildingblock.position.z=0;
+
+scene.add(buildingblock);
+
+}
+
+
+}
+
+
+}
     initCamera();
 
 
