@@ -176,6 +176,7 @@ function initMesh() {
         mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
         mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.75;
         mesh.translation = THREE.GeometryUtils.center(geometry);
+mesh.castShadow = true;
         scene.add(mesh);
     });
 }
