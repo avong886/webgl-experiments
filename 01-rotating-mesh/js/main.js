@@ -149,7 +149,7 @@ function initRenderer() {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(WIDTH, HEIGHT);
 renderer.shadowMapEnabled = true;
-renderer.shadowMapType = THREE.PCFSoftShadowMap;
+//renderer.shadowMapType = THREE.PCFSoftShadowMap;
 }
 
 function initLights() {
