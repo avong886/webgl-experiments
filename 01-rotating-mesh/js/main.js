@@ -155,6 +155,7 @@ function initRenderer() {
     renderer.setSize(WIDTH, HEIGHT);
 renderer.shadowMapEnabled = true;
 renderer.shadowMapEnabled = true;
+renderer.shadowMapSize = 1;
 renderer.shadowMapSoft = true;
 
 renderer.shadowCameraNear = 3;
@@ -163,8 +164,8 @@ renderer.shadowCameraFov = 50;
 
 renderer.shadowMapBias = 0.0039;
 renderer.shadowMapDarkness = 0.5;
-renderer.shadowMapWidth = 1024;
-renderer.shadowMapHeight = 1024;
+renderer.shadowMapWidth = 1;
+renderer.shadowMapHeight = 10;
 renderer.shadowMapBias = 100;
 
 renderer.shadowMapType = THREE.PCFSoftShadowMap;
