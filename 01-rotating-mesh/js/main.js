@@ -97,7 +97,7 @@ var plane2 = new THREE.Mesh(
     planeMaterial2);
 //plane.rotation.x= Math.PI/2;
 //plane.doubleSided=true;
-
+plane2.receiveShadow = true;
 scene.add(plane2);
 
 plane2.position.set(-1,-1.5,-1);
@@ -148,10 +148,11 @@ function initCamera() {
 function initRenderer() {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(WIDTH, HEIGHT);
+renderer.shadowMapType = THREE.PCFSoftShadowMap;
 }
 
 function initLights() {
-    var light = new THREE.PointLight( 0xffffff, 5, 100 ); 
+    var light = new THREE.PointLight( 0xffffff, 1, 100 ); 
     light.position.set( 10, 10, 20 ); 
     scene.add( light );
 
@@ -159,11 +160,11 @@ var light2 = new THREE.PointLight( 0xffff66, 1, 100 );
     light2.position.set( -5, 20, 10 ); 
     scene.add( light2 );
 
-//spotLight = new THREE.SpotLight(0xffffff);
-//spotLight.position.set(0, 0, 460);
-//spotLight.intensity = 1;
-//spotLight.castShadow = true;
-//scene.add(spotLight);
+spotLight = new THREE.SpotLight(0xffffff);
+spotLight.position.set(0, 0, 460);
+spotLight.intensity = 1;
+spotLight.castShadow = true;
+scene.add(spotLight);
 
 }
 
