@@ -168,7 +168,7 @@ function rotateMesh() {
     
     if (jumpSpeed > 0)
     {
-    	jumpSpeed -= 5;
+    	jumpSpeed -= 0.9;
     }
 
     zLocation += jumpSpeed;
