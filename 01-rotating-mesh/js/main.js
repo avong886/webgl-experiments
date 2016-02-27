@@ -81,7 +81,7 @@ var plane = new THREE.Mesh(
     planeMaterial);
 //plane.rotation.x= Math.PI/2;
 //plane.doubleSided=true;
-
+plane.receiveShadow = true;
 scene.add(plane);
 
 plane.position.set(1,-2,1);
@@ -148,6 +148,7 @@ function initCamera() {
 function initRenderer() {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(WIDTH, HEIGHT);
+renderer.shadowMapEnabled = true;
 renderer.shadowMapType = THREE.PCFSoftShadowMap;
 }
 
