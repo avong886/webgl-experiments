@@ -154,27 +154,30 @@ function initRenderer() {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(WIDTH, HEIGHT);
 renderer.shadowMapEnabled = true;
-renderer.shadowMapEnabled = true;
-renderer.shadowMapSize = 1;
+
+//renderer.shadowMapEnabled = true;
+
+renderer.shadowMapSize = 100;
 renderer.shadowMapSoft = true;
 
-renderer.shadowCameraNear = 3;
+renderer.shadowCameraNear = 0.1;
 renderer.shadowCameraFar = camera.far;
 renderer.shadowCameraFov = 50;
 
-renderer.shadowMapBias = 0.0039;
-renderer.shadowMapDarkness = 0.5;
-renderer.shadowMapWidth = 1;
-renderer.shadowMapHeight = 10;
+//renderer.shadowMapBias = 1;
+
+renderer.shadowMapDarkness = 1;
+renderer.shadowMapWidth = 100;
+renderer.shadowMapHeight = 100;
 renderer.shadowMapBias = 100;
 
 renderer.shadowMapType = THREE.PCFSoftShadowMap;
 }
 
 function initLights() {
-   // var light = new THREE.PointLight( 0xffffff, 1, 100 ); 
-    //light.position.set( 0, 10, 0 ); 
-   // scene.add( light );
+   var light = new THREE.PointLight( 0xffffff, 1, 100 ); 
+    light.position.set( 10, 10, 10 ); 
+   scene.add( light );
 
 //var light2 = new THREE.PointLight( 0xffff66, 1, 100 ); 
    // light2.position.set( 0, 10, 0); 
