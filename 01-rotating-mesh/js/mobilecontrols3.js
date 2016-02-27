@@ -1,10 +1,14 @@
 
+    
     var xLocation=0;
 var yLocation=0;
 var zLocation=0;
 var jumpSpeed = 0;
     var spartanspeed = 0;
 var spartanspeed2 = 0;
+
+var theme1 = new Audio();
+theme1.src="http://legoattachments3.pbworks.com/w/file/fetch/97642362/Halo%203%20Original%20Soundtrack%20%28The%20Covenant%20-%20One%20Final%20Effort%29.mp3";
 
      var initialX=0;
 var initialY=0;
@@ -21,7 +25,7 @@ touches = []; // array of touch vectors
 setInterval(draw, 1000/35); 
 if(touchable) {
 canvas1.addEventListener( 'touchstart', onTouchStart, false );
-canvas1.addEventListener( 'touchmove', onTouchMove, false );
+canvas1.addEventListener( 'touchmove', onTouchMove, false ); 
 canvas1.addEventListener( 'touchend', onTouchEnd, false );
 window.onorientationchange = resetCanvas; 
 window.onresize = resetCanvas; 
