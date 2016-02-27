@@ -82,6 +82,7 @@ var plane = new THREE.Mesh(
 //plane.rotation.x= Math.PI/2;
 //plane.doubleSided=true;
 plane.receiveShadow = true;
+plane.castShadow=true;
 scene.add(plane);
 
 plane.position.set(1,-2,1);
@@ -98,6 +99,7 @@ var plane2 = new THREE.Mesh(
 //plane.rotation.x= Math.PI/2;
 //plane.doubleSided=true;
 plane2.receiveShadow = true;
+plane2.castShadow=true;
 scene.add(plane2);
 
 plane2.position.set(-1,-1.5,-1);
@@ -119,6 +121,7 @@ var buildingblock= new THREE.Mesh( cube, blockMaterial);
 buildingblock.position.x=j*blocksize;
 buildingblock.position.z=i*blocksize;
 buildingblock.position.y=0;
+
 
 scene.add(buildingblock);
 
@@ -149,7 +152,7 @@ function initRenderer() {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(WIDTH, HEIGHT);
 renderer.shadowMapEnabled = true;
-//renderer.shadowMapType = THREE.PCFSoftShadowMap;
+renderer.shadowMapType = THREE.PCFSoftShadowMap;
 }
 
 function initLights() {
