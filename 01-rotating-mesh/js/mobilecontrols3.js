@@ -10,7 +10,10 @@ var spartanspeed2 = 0;
 var theme1 = new Audio();
 theme1.src="http://legoattachments3.pbworks.com/w/file/fetch/97642362/Halo%203%20Original%20Soundtrack%20%28The%20Covenant%20-%20One%20Final%20Effort%29.mp3";
 theme1.load();
+function theTheme(){
+
 theme1.play();
+}
      var initialX=0;
 var initialY=0;
 var canvas1,
