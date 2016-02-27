@@ -21,6 +21,8 @@ var radius = .1,
 segments = 6,
 rings = 6;
 
+blocksize= 1;
+
 map=[
 [0,1,0,0,1,0,0,1],
 [0,1,0,0,1,0,0,1],
@@ -64,6 +66,13 @@ new THREE.MeshLambertMaterial(
     color: 0x996600
 });
 
+var blockMaterial =
+new THREE.MeshLambertMaterial(
+{
+    color: 0xd3e1e6
+});
+
+
 //playing surface plane
 var plane = new THREE.Mesh(
     new THREE.PlaneGeometry(
@@ -96,7 +105,7 @@ plane2.rotation.set( Math.PI/2,0,0);
 
 plane2.material.side = THREE.DoubleSide;
 
-var cube= new THREE.CubeGeometry(0.1, 0.5, 0.1);
+var cube= new THREE.CubeGeometry(blocksize, blocksize*2, blocksize);
 
 for(var i = 0; i < 7; i++)
 {
@@ -106,9 +115,9 @@ for(var j = 0; j < 8; j++)
 if(map[i][j]==1)
 {
 
-var buildingblock= new THREE.Mesh( cube, planeMaterial2);
-buildingblock.position.x=j*0.1;
-buildingblock.position.z=i*0.1;
+var buildingblock= new THREE.Mesh( cube, blockMaterial);
+buildingblock.position.x=j*blocksize;
+buildingblock.position.z=i*blocksize;
 buildingblock.position.y=0;
 
 scene.add(buildingblock);
