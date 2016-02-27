@@ -154,7 +154,7 @@ function initRenderer() {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(WIDTH, HEIGHT);
 renderer.shadowMapEnabled = true;
-renderer.shadowMapBias = 0.0039;
+renderer.shadowMapBias = 100;
 renderer.shadowMapType = THREE.PCFSoftShadowMap;
 }
 
