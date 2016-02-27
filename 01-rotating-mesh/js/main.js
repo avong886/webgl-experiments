@@ -157,18 +157,18 @@ renderer.shadowMapEnabled = true;
 
 //renderer.shadowMapEnabled = true;
 
-renderer.shadowMapSize = 100;
+//renderer.shadowMapSize = 100;
 renderer.shadowMapSoft = true;
 
-renderer.shadowCameraNear = 1;
-renderer.shadowCameraFar = camera.far;
-renderer.shadowCameraFov = 50;
+//renderer.shadowCameraNear = 1;
+//renderer.shadowCameraFar = camera.far;
+//renderer.shadowCameraFov = 50;
 
 //renderer.shadowMapBias = 1;
 
-renderer.shadowMapDarkness = 1;
-renderer.shadowMapWidth = 100;
-renderer.shadowMapHeight = 100;
+//renderer.shadowMapDarkness = 1;
+//renderer.shadowMapWidth = 100;
+//renderer.shadowMapHeight = 100;
 renderer.shadowMapBias = 100;
 
 renderer.shadowMapType = THREE.PCFSoftShadowMap;
