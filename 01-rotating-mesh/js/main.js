@@ -158,7 +158,7 @@ renderer.shadowMapEnabled = true;
 //renderer.shadowMapEnabled = true;
 
 //renderer.shadowMapSize = 100;
-renderer.shadowMapSoft = true;
+//renderer.shadowMapSoft = true;
 
 //renderer.shadowCameraNear = 1;
 //renderer.shadowCameraFar = camera.far;
@@ -169,9 +169,9 @@ renderer.shadowMapSoft = true;
 //renderer.shadowMapDarkness = 1;
 //renderer.shadowMapWidth = 100;
 //renderer.shadowMapHeight = 100;
-renderer.shadowMapBias = 100;
+//renderer.shadowMapBias = 100;
 
-renderer.shadowMapType = THREE.PCFSoftShadowMap;
+//renderer.shadowMapType = THREE.PCFSoftShadowMap;
 }
 
 function initLights() {
@@ -183,7 +183,7 @@ function initLights() {
    // light2.position.set( 0, 10, 0); 
    // scene.add( light2 );
 
-spotLight = new THREE.PointLight(0xffffff);
+spotLight = new THREE.SpotLight(0xffffff);
 spotLight.position.set(0, 30, 0);
 spotLight.intensity = 2;
 spotLight.castShadow = true;
