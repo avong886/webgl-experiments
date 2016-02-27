@@ -166,7 +166,7 @@ function initLights() {
    // light2.position.set( 0, 10, 0); 
    // scene.add( light2 );
 
-spotLight = new THREE.SpotLight(0xffffff);
+spotLight = new THREE.DirectionalLight(0xffffff);
 spotLight.position.set(0, 30, 0);
 spotLight.intensity = 2;
 spotLight.castShadow = true;
