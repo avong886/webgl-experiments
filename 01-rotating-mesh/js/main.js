@@ -121,6 +121,8 @@ var buildingblock= new THREE.Mesh( cube, blockMaterial);
 buildingblock.position.x=j*blocksize;
 buildingblock.position.z=i*blocksize;
 buildingblock.position.y=0;
+buildingblock.castShadow = true;
+buildingblock.reciveShadow = true;
 
 
 scene.add(buildingblock);
