@@ -154,15 +154,15 @@ renderer.shadowMapType = THREE.PCFSoftShadowMap;
 
 function initLights() {
     var light = new THREE.PointLight( 0xffffff, 1, 100 ); 
-    light.position.set( 10, 10, 20 ); 
+    light.position.set( 0, 0, 20 ); 
     scene.add( light );
 
 var light2 = new THREE.PointLight( 0xffff66, 1, 100 ); 
-    light2.position.set( -5, 20, 10 ); 
+    light2.position.set( 0, 0, 10 ); 
     scene.add( light2 );
 
 spotLight = new THREE.SpotLight(0xffffff);
-spotLight.position.set(0, 0, 460);
+spotLight.position.set(0, 0, 20);
 spotLight.intensity = 1;
 spotLight.castShadow = true;
 scene.add(spotLight);
