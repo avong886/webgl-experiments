@@ -165,8 +165,8 @@ function initLights() {
    // scene.add( light2 );
 
 spotLight = new THREE.SpotLight(0xffffff);
-spotLight.position.set(0, 10, 0);
-spotLight.intensity = 1;
+spotLight.position.set(0, 30, 0);
+spotLight.intensity = 2;
 spotLight.castShadow = true;
 scene.add(spotLight);
 
