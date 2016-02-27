@@ -96,7 +96,7 @@ plane2.rotation.set( Math.PI/2,0,0);
 
 plane2.material.side = THREE.DoubleSide;
 
-var cube= new THREE.CubeGeometry(0.1, 0.2, 0.1);
+var cube= new THREE.CubeGeometry(0.1, 0.5, 0.1);
 
 for(var i = 0; i < 7; i++)
 {
@@ -108,8 +108,8 @@ if(map[i][j]==1)
 
 var buildingblock= new THREE.Mesh( cube, planeMaterial2);
 buildingblock.position.x=j*0.1;
-buildingblock.position.y=i*0.1;
-buildingblock.position.z=0;
+buildingblock.position.z=i*0.1;
+buildingblock.position.y=0;
 
 scene.add(buildingblock);
 
@@ -146,8 +146,8 @@ function initLights() {
     light.position.set( 50, 50, 50 ); 
     scene.add( light );
 
-var light2 = new THREE.PointLight( 0xffff66, 5, 100 ); 
-    light2.position.set( 5, 10, 10 ); 
+var light2 = new THREE.PointLight( 0xffff66, 1, 100 ); 
+    light2.position.set( -5, 20, 10 ); 
     scene.add( light2 );
 
 spotLight = new THREE.SpotLight(0xffffff);
