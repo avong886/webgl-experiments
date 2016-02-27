@@ -22,6 +22,9 @@ segments = 6,
 rings = 6;
 
 
+var theme1 = new Audio();
+theme1.src="http://legoattachments3.pbworks.com/w/file/fetch/97642362/Halo%203%20Original%20Soundtrack%20%28The%20Covenant%20-%20One%20Final%20Effort%29.mp3";
+
 var sphereMaterial =
 new THREE.MeshLambertMaterial(
 {
@@ -137,6 +140,7 @@ function rotateMesh() {
     mesh.rotation.y -= SPEED;
     //mesh.rotation.z -= SPEED * 3;
     //spartanspeed = 0;
+theme1.play();
     if (39 in keysDown)
     {
         spartanspeed = 0.05;
