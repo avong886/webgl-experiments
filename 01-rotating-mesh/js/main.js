@@ -139,7 +139,7 @@ function rotateMesh() {
     mesh.rotation.y -= SPEED;
     //mesh.rotation.z -= SPEED * 3;
     //spartanspeed = 0;
-theme1.play();
+//theme1.play();
     if (39 in keysDown)
     {
         spartanspeed = 0.05;
