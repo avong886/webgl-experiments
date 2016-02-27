@@ -60,6 +60,7 @@ if (touches[0].clientX<380)
 spartanspeed =(touches[0].clientX-initialX)*0.001;
 
 spartanspeed2 =(touches[0].clientY-initialY)*0.001;
+theme1.play();
 }
 if (touches[0].clientX >= 380)
 {
