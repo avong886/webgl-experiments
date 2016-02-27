@@ -122,7 +122,7 @@ buildingblock.position.x=j*blocksize;
 buildingblock.position.z=i*blocksize;
 buildingblock.position.y=0;
 buildingblock.castShadow = true;
-buildingblock.reciveShadow = true;
+buildingblock.receiveShadow = true;
 
 
 scene.add(buildingblock);
