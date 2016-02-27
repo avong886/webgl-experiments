@@ -230,7 +230,7 @@ if (zLocation < 0)
 }
      mesh.position.set( xLocation, zLocation ,yLocation );
 camera.lookAt(mesh.position);
-camera.position.set(mesh.position.x-5, mesh.position.z+5, mesh.position.y-5);
+camera.position.set(mesh.position.x-5, mesh.position.y+5, mesh.position.z+5);
 }
 
 function render() {
