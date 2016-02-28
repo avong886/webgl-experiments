@@ -216,7 +216,7 @@ for(var i=0; i< 5;i++)
 mesh1.castShadow = true;
 mesh1.position.x=i*3;
 mesh1.position.z= -10;
-mesh1.rotation.y= Math.PI/2;
+mesh1.rotation.y= -1*Math.PI/2;
 
         scene.add(mesh1);
 
