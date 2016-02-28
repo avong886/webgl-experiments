@@ -72,6 +72,14 @@ new THREE.MeshLambertMaterial(
     color: 0xd3e1e6
 });
 
+var hologramMaterial =
+new THREE.MeshLambertMaterial(
+{
+transparent: true,
+    color: 0x9966ff,
+opacity: 0.5
+});
+
 
 //playing surface plane
 var plane = new THREE.Mesh(
@@ -229,9 +237,9 @@ mesh1.rotation.y= -1*Math.PI/2;
 var loader3 = new THREE.JSONLoader();
     loader3.load('./cortana1.json', function(geometry, materials) {
 
-mesh3 = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
-mesh3.material.transparent=true;
-mesh3.material.opacity=0.5;
+mesh3 = new THREE.Mesh(geometry, hologramMaterial);
+mesh3.material
+mesh3.material
         mesh3.scale.x = mesh3.scale.y = mesh3.scale.z = 0.5;
         mesh3.translation = THREE.GeometryUtils.center(geometry);
 //mesh3.castShadow = true;
