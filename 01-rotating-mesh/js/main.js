@@ -300,8 +300,8 @@ if (zLocation < 0)
      mesh.position.set( xLocation, zLocation ,yLocation );
 //camera.lookAt(mesh.position);
 
-camera.position.set(Math.cos(mesh.rotation.y)*(5-mesh.position.x)-Math.sin(mesh.rotation.y)*(5-mesh.position.z)+mesh.position.x, mesh.position.y+5, Math.sin(mesh.rotation.y)*(5-mesh.position.x)+Math.cos(mesh.rotation.y)*(5-mesh.position.z)+mesh.position.z;
-camera.rotation.set(mesh.position);
+camera.position.set(Math.cos(mesh.rotation.y)*(5-mesh.position.x)-Math.sin(mesh.rotation.y)*(5-mesh.position.z)+mesh.position.x, mesh.position.z+5, Math.sin(mesh.rotation.y)*(5-mesh.position.x)+Math.cos(mesh.rotation.y)*(5-mesh.position.z)+mesh.position.z;
+camera.rotation.set(mesh.rotation);
 }
 
 function render() {
