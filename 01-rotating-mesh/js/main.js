@@ -215,7 +215,7 @@ mesh.castShadow = true;
 
 
 
-
+var mesh1 = null;
 var loader2 = new THREE.JSONLoader();
     loader2.load('./spartan5.json', function(geometry, materials) {
 for(var i=0; i< 5;i++)
@@ -233,7 +233,7 @@ mesh1.rotation.y= -1*Math.PI/2;
 }
     });
 
-
+var mesh3 = null;
 var loader3 = new THREE.JSONLoader();
     loader3.load('./cortana1.json', function(geometry, materials) {
 
@@ -250,6 +250,27 @@ mesh3.rotation.y= -1*Math.PI/2;
         scene.add(mesh3);
 
 });
+
+var geometry1 = new THREE.CubeGeometry(10,10,10);
+
+var keyes1 = new THREE.MeshPhongMaterial( { map: THREE.ImageUtils.loadTexture('image.jpeg') } );
+var meshFaceMaterial = new THREE.MeshFaceMaterial( keyes1 );
+
+geometry1.faceVertexUvs[0] = [  
+new THREE.Vector2(0, 0,
+new THREE.Vector2(0, 1),
+new THREE.Vector2(1, 0),
+new THREE.Vector2(1, 1)
+];
+
+
+
+
+var captain = null;
+captain = new THREE.mesh(geometry1, meshFaceMaterial);
+
+scene.add(captain);
+
 
 }
 
