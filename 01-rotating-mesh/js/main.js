@@ -202,6 +202,17 @@ function initMesh() {
 mesh.castShadow = true;
         scene.add(mesh);
     });
+
+
+var loader2 = new THREE.JSONLoader();
+    loader2.load('./Red.Spartan.json', function(geometry, materials) {
+        mesh1 = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+        mesh1.scale.x = mesh1.scale.y = mesh1.scale.z = 0.75;
+        mesh1.translation = THREE.GeometryUtils.center(geometry);
+mesh1.castShadow = true;
+        scene.add(mesh1);
+    });
+
 }
 
 function rotateMesh() {
