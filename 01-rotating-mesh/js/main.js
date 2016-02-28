@@ -134,7 +134,10 @@ scene.add(buildingblock);
 
 
 }
-    initCamera();
+
+ camera.position.set(mesh.position.x-5, mesh.position.y+5, mesh.position.z+5);
+camera.lookAt(mesh.position);
+   initCamera();
 
 
     initLights();
@@ -295,8 +298,10 @@ if (zLocation < 0)
 	jumpSpeed = 0;
 }
      mesh.position.set( xLocation, zLocation ,yLocation );
-camera.lookAt(mesh.position);
-camera.position.set(mesh.position.x-5, mesh.position.y+5, mesh.position.z+5);
+//camera.lookAt(mesh.position);
+
+camera.position.set(Math.cos(mesh.rotation.y)*(5-mesh.position.x)-Math.sin(mesh.rotation.y)*(5-mesh.position.z)+mesh.position.x, mesh.position.y+5, Math.sin(mesh.rotation.y)*(5-mesh.position.x)+Math.cos(mesh.rotation.y)*(5-mesh.position.z)+mesh.position.z;
+camera.rotation.set(mesh.position);
 }
 
 function render() {
