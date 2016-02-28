@@ -204,14 +204,24 @@ mesh.castShadow = true;
     });
 
 
+for(var i=0; i< 5;i++)
+{
+
 var loader2 = new THREE.JSONLoader();
     loader2.load('./spartan5.json', function(geometry, materials) {
         mesh1 = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
         mesh1.scale.x = mesh1.scale.y = mesh1.scale.z = 0.75;
         mesh1.translation = THREE.GeometryUtils.center(geometry);
 mesh1.castShadow = true;
+mesh1.position.x=i*3;
+mesh1.position.z= -10;
+mesh1.rotation.y= Math.PI/2;
+
         scene.add(mesh1);
     });
+
+}
+
 
 }
 
