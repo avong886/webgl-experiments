@@ -256,13 +256,6 @@ var geometry1 = new THREE.CubeGeometry(10,10,10);
 var keyes1 = new THREE.MeshPhongMaterial( { map: THREE.ImageUtils.loadTexture('image.jpeg') } );
 var meshFaceMaterial = new THREE.MeshFaceMaterial( keyes1 );
 
-geometry1.faceVertexUvs[0] = [  
-new THREE.Vector2(0, 0,
-new THREE.Vector2(0, 1),
-new THREE.Vector2(1, 0),
-new THREE.Vector2(1, 1)
-];
-
 
 
 
