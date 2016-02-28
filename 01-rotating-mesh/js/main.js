@@ -251,18 +251,6 @@ mesh3.rotation.y= -1*Math.PI/2;
 
 });
 
-var geometry1 = new THREE.CubeGeometry(10,10,10);
-
-var keyes1 = new THREE.MeshPhongMaterial( { map: THREE.ImageUtils.loadTexture('image.jpeg') } );
-var meshFaceMaterial1 = new THREE.MeshFaceMaterial( keyes1 );
-
-
-
-
-var captain = null;
-captain = new THREE.mesh(geometry1, meshFaceMaterial1 );
-
-scene.add(captain);
 
 
 }
