@@ -137,8 +137,7 @@ scene.add(buildingblock);
 
  
    initCamera();
-camera.position.set(mesh.position.x-5, mesh.position.y+5, mesh.position.z+5);
-camera.lookAt(mesh.position);
+
 
     initLights();
     initRenderer();
