@@ -231,7 +231,7 @@ mesh3 = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
         mesh3.scale.x = mesh3.scale.y = mesh3.scale.z = 0.5;
         mesh3.translation = THREE.GeometryUtils.center(geometry);
 mesh3.castShadow = true;
-mesh3.position.x=-2*3;
+mesh3.position.x= -2*3;
 mesh3.position.z= -5;
 mesh3.rotation.y= -1*Math.PI/2;
 
